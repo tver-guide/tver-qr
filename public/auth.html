@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход и регистрация</title>
+  <link rel="stylesheet" href="/css/menu.css">
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="head">
+      <h1>Аккаунт</h1>
+      <p class="sub">Регистрация нужна, чтобы прогресс и достижения сохранялись и не терялись при смене телефона.</p>
+    </header>
+    <div class="panel">
+      <div class="tabs">
+        <button class="tab active" type="button" data-mode="login">Вход</button>
+        <button class="tab" type="button" data-mode="register">Регистрация</button>
+      </div>
+      <form id="form" novalidate>
+        <label class="field" id="nameField" hidden>Имя
+          <input type="text" name="username" autocomplete="nickname" maxlength="40">
+        </label>
+        <label class="field">Email
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label class="field">Пароль
+          <input type="password" name="password" autocomplete="current-password" minlength="6" required>
+        </label>
+        <p class="form-msg error" id="msg" role="alert"></p>
+        <button class="submit" type="submit" id="submit">Войти</button>
+      </form>
+    </div>
+  </main>
+  <script src="/js/app.js" defer></script>
+  <script src="/js/auth.js" defer></script>
+</body>
+</html>
